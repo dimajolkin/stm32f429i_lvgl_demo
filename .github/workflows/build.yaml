@@ -5,11 +5,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup SSH
-        uses: MrSquaare/ssh-setup-action@v1
-        with:
-            host: github.com
-            private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:

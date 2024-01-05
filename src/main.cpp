@@ -76,6 +76,8 @@ int main()
     lv_log_register_print_cb( my_print );
 
     debug("LittlevGL DEMO");
+    ticker.attach(callback(lv_task_handler), 2);
+
     // lv_example_get_started_1();
     
     ui_init();
@@ -91,7 +93,7 @@ void lv_ticker_func() {
     lv_tick_inc(LVGL_TICK); 
     //Call lv_tick_inc(x) every x milliseconds in a Timer or Task (x should be between 1 and 10). 
     //It is required for the internal timing of LittlevGL.
-    lv_task_handler(); 
+    // lv_task_handler(); 
     //Call lv_task_handler() periodically every few milliseconds. 
     //It will redraw the screen if required, handle input devices etc.
 }

@@ -16,9 +16,6 @@
 
 #define LVGL_TICK 5                             //Time tick value for lvgl in ms (1-10msa)
 
-void wait_ms(int ms) {
-
-}
 TS_StateTypeDef TS_State; 
 
 FileHandle *mbed::mbed_override_console(int)
@@ -68,7 +65,6 @@ uint8_t my_prinnt_line = 0;
 
 void my_print(const char * buf)
 {
-    // BSP_LCD_DisplayStringAtLine(my_prinnt_line++, (uint8_t *) buf);
     debug(buf);
 }
 
